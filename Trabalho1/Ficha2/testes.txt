@@ -1,0 +1,27 @@
+Biblioteca de Testes
+
+Sintaxe:
+Teste
+Resultado esperado
+Resultado obtido
+
+
+"[ Use x, Decl x, [ Decl y, Use x, Use y], Use x]"
+[]
+[]
+
+"[ Use y, Decl x, [ Decl y, Use x, Decl y], Use x]"
+[Use y,Decl y]
+[Use y,Decl y]
+
+"[ Use x, Decl x, [ Decl y, Use x, [Decl q, [[[Use b]]],  Decl q]], Use x, [Decl p, Use j], Decl j]" 
+ [Decl q, Use b]
+ [Decl q, Use b]
+
+"[ Use x, Decl x, [ Decl y, Use x, [Decl q, Decl s, [[[Use b, [Use s]]]]]], Use x, [Decl p, Use j], Decl j]" 
+[Use b]
+[Use b]
+
+"[]"
+[]
+[]
