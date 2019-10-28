@@ -108,10 +108,9 @@ enclosedBy p1 p2 p3 = (\ a b c -> b) <$> p1 <*> p2 <*> p3
 token' a = (\ a b c -> b) <$> spaces <*> token a <*> spaces
 
 followedBy :: Parser s a -> Parser s b -> Parser s [a]
-followedBy d s =  f <$> d <*> s
-              <|> g <$> d <*> s <*> followedBy d s 
-            where f a b = [a] 
-                  g a b c = a:c
-
+followedBy d s =  g <$> d <*> s <*> followedBy d s
+              <|>  succeed []
+            where  g a b c = a:c
+                  
 block :: Parser s a -> Parser s b -> Parser s r -> Parser s f -> Parser s [r]
 block od ss ps cd = enclosedBy od (followedBy ps ss) cd                
