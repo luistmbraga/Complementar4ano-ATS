@@ -11,6 +11,13 @@ import Localidades
 data NovoProp = NovoProp Nome NIF Email Localidade
               deriving Show 
 
+genNovoProp :: Gen NovoProp 
+genNovoProp = do nome <- genNomeP 
+                 nif  <- genNifP 
+                 mail <- genEmailP 
+                 loc  <- genLocalidadeP 
+                 return (NovoProp nome nif mail loc)
+
 genNomeP :: Gen Nome 
 genNomeP = elements Nomes.listaNomes 
 
