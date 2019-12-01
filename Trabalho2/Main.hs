@@ -202,18 +202,19 @@ genNota = frequency [(10,elements[0..20]),(20,elements[20..50]),(60,elements[50.
 data Log = Log [NovoProp] [NovoCliente] [NovoCarro] [Aluguer] [Classificar]
         deriving Show
 
-genLogs :: Int -> Gen Log
-genLogs n = do props     <- vectorOf n genNovoProp
-               clientes  <- vectorOf n genNovoCliente
-               let nifsC = map nifCliente clientes 
-               let nifsP = map nifProp props
-               let nifs  = nifsC ++ nifsP
-               carros    <- vectorOf n $ genNovoCarro nifs
-               let matrs = map matrCarro carros
-               alugueres <- vectorOf n $ genAluguer nifsC
-               aleat     <- elements [True,False]
-               classifs  <- vectorOf n $ genClassificar $ if aleat then Left matrs else Right nifs
-               return $ Log props clientes carros alugueres classifs
+genLogs :: Int -> Int -> Int -> Int -> Int -> Gen Log
+genLogs nProps nClientes nCarros nAlugueres nClassifs  = 
+                          do props     <- vectorOf nProps genNovoProp
+                             clientes  <- vectorOf nClientes genNovoCliente
+                             let nifsC = map nifCliente clientes 
+                             let nifsP = map nifProp props
+                             let nifs  = nifsC ++ nifsP
+                             carros    <- vectorOf nCarros $ genNovoCarro nifs
+                             let matrs = map matrCarro carros
+                             alugueres <- vectorOf nAlugueres $ genAluguer nifsC
+                             aleat     <- elements [True,False]
+                             classifs  <- vectorOf nClassifs $ genClassificar $ if aleat then Left matrs else Right nifs
+                             return $ Log props clientes carros alugueres classifs
 
 
 nifCliente :: NovoCliente -> NIF
