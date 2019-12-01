@@ -96,17 +96,17 @@ type Preco_Km = Float
 type CONS_Km = Float  
 type Autonomia = Int  
 
-genNovoCarro :: Gen NovoCarro 
-genNovoCarro = do comb <- genTipoCombustivel  
-                  marc <- genMarcas 
-                  matr <- genMatriculas 
-                  nif  <- genNifP 
-                  vel  <- genVelocidade 
-                  p_km <- genPrecoKM 
-                  c_km <- genConsumoKM 
-                  aut  <- genAutonomia 
-                  coor <- genCoordenadas
-                  return (NovoCarro comb marc matr nif vel p_km c_km aut coor)
+genNovoCarro :: [NIF] -> Gen NovoCarro 
+genNovoCarro nifs = do comb <- genTipoCombustivel  
+                       marc <- genMarcas 
+                       matr <- genMatriculas 
+                       nif  <- elements nifs 
+                       vel  <- genVelocidade 
+                       p_km <- genPrecoKM 
+                       c_km <- genConsumoKM 
+                       aut  <- genAutonomia 
+                       coor <- genCoordenadas
+                       return (NovoCarro comb marc matr nif vel p_km c_km aut coor)
 
 genTipoCombustivel :: Gen TipoCombustivel
 genTipoCombustivel = frequency [(95, return "Gasolina"),(3, return "Hibrido"), (2, return "Electrico")] 
@@ -154,12 +154,12 @@ data Aluguer = Aluguer NIF Coordenadas TipoCombustivel Preferencia
 
 type Preferencia = String
 
-genAluguer :: Gen Aluguer 
-genAluguer = do nif  <- genNifC 
-                coor <- genCoordenadas 
-                comb <- genTipoCombustivel 
-                pref <- genPreferencia 
-                return (Aluguer nif coor comb pref)
+genAluguer :: [NIF] -> Gen Aluguer 
+genAluguer nifs = do nif  <- elements nifs
+                     coor <- genCoordenadas 
+                     comb <- genTipoCombustivel 
+                     pref <- genPreferencia 
+                     return (Aluguer nif coor comb pref)
 
 genPreferencia :: Gen Preferencia
 genPreferencia = elements ["MaisPerto", "MaisBarato"]              
@@ -181,17 +181,49 @@ genPreferencia = elements ["MaisPerto", "MaisBarato"]
 --Classificar:YK-17-88,40
 --Classificar:289068463,69
 
-data Classificar = Classificar 
+data Classificar = Classificar (Either Matricula NIF) Nota
                    deriving Show 
 
 type Nota = Int 
 
+genClassificar :: Either [Matricula] [NIF] -> Gen Classificar
+genClassificar (Left matrs) = do matr <- elements matrs
+                                 nota <- genNota
+                                 return $ Classificar (Left matr) nota
+genClassificar (Right nifs) = do nif <- elements nifs
+                                 nota <- genNota
+                                 return $ Classificar (Right nif) nota 
+                              
 genNota :: Gen Nota 
 genNota = frequency [(10,elements[0..20]),(20,elements[20..50]),(60,elements[50..90]),(10,elements[80..100])]  
 
-
 --import Test.QuickCheck
 
+data Log = Log [NovoProp] [NovoCliente] [NovoCarro] [Aluguer] [Classificar]
+        deriving Show
+
+genLogs :: Int -> Gen Log
+genLogs n = do props     <- vectorOf n genNovoProp
+               clientes  <- vectorOf n genNovoCliente
+               let nifsC = map nifCliente clientes 
+               let nifsP = map nifProp props
+               let nifs  = nifsC ++ nifsP
+               carros    <- vectorOf n $ genNovoCarro nifs
+               let matrs = map matrCarro carros
+               alugueres <- vectorOf n $ genAluguer nifsC
+               aleat     <- elements [True,False]
+               classifs  <- vectorOf n $ genClassificar $ if aleat then Left matrs else Right nifs
+               return $ Log props clientes carros alugueres classifs
+
+
+nifCliente :: NovoCliente -> NIF
+nifCliente (NovoCliente _ nif _ _ _) = nif
+
+nifProp :: NovoProp -> NIF
+nifProp (NovoProp _ nif _ _) = nif
+
+matrCarro :: NovoCarro -> Matricula
+matrCarro (NovoCarro _ _ matr _ _ _ _ _ _) = matr
 
 main :: IO()
 main = do
