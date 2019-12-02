@@ -4,6 +4,7 @@ import Test.QuickCheck
 import Data.Char 
 import Nomes 
 import Localidades
+import System.IO
 import Data.List (nub)
 
 --NovoProp: nome, nif, email,morada   287
@@ -259,18 +260,19 @@ nifProp (NovoProp _ nif _ _) = nif
 matrCarro :: NovoCarro -> Matricula
 matrCarro (NovoCarro _ _ matr _ _ _ _ _ _) = matr
 
+prompt :: String -> IO String
+prompt text = do
+          putStr text
+          hFlush stdout
+          getLine
+
 main :: IO ()
 main = do
-     putStr "Numero de Proprietarios: "
-     nProps <- getLine
-     putStr "Numero de Clientes: "
-     nClientes <- getLine
-     putStr "Numero de Carros: "
-     nCarros <- getLine
-     putStr "Numero de Alugueres: "
-     nAlugueres <- getLine
-     putStr "Numero de Classificacoes: "
-     nClassifs <- getLine
+     nProps <- prompt "Numero de Proprietarios: "
+     nClientes <- prompt "Numero de Clientes: "
+     nCarros <- prompt "Numero de Carros: "
+     nAlugueres <- prompt "Numero de Alugueres: "
+     nClassifs <- prompt "Numero de Classificacoes: "
      log <- generate $ genLogs (read nProps) (read nClientes) (read nCarros) (read nAlugueres) (read nClassifs)
      writeFile "log.txt" ("Logs\n" ++ show log)
      return ()
