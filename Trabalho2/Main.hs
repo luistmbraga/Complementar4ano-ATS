@@ -1,15 +1,20 @@
 module Main where
-     --stack ghci --package QuickCheck -- .\ficha5.hs
+     --stack ghci --package QuickCheck -- .\Main.hs
 import Test.QuickCheck
 import Data.Char 
 import Nomes 
 import Localidades
---import Data.Decimal
+import Data.List (nub)
+
 --NovoProp: nome, nif, email,morada   287
 --NovoProp:Laurindo,558192493,611843917@gmail.com,Miranda do Douro
 
 data NovoProp = NovoProp Nome NIF Email Localidade
-              deriving Show 
+
+instance Show NovoProp where
+     show = pp_NovoProp
+
+pp_NovoProp (NovoProp n nif e l) = "NovoProp:" ++ n ++ "," ++ nif ++ "," ++ e ++ "," ++ l
 
 genNovoProp :: Gen NovoProp 
 genNovoProp = do nome <- genNomeP 
@@ -39,7 +44,11 @@ genLocalidadeP = elements Localidades.lista_localidades
 --NovoCliente:Rodrigo Tiago Oliveira Ferreira,176743524,176743524@gmail.com,Carregal do Sal,33.99243,77.844696
 
 data NovoCliente = NovoCliente Nome NIF Email Localidade Coordenadas
-                 deriving Show 
+
+instance Show NovoCliente where
+     show = pp_NovoCliente
+
+pp_NovoCliente (NovoCliente n nif e l c) = "NovoCliente:" ++ n ++ "," ++ nif ++ "," ++ e ++ "," ++ l ++ "," ++ show (fst c) ++ "," ++ show (snd c)
 
 type Nome = String 
 type NIF = String
@@ -86,7 +95,13 @@ genCoordenadas = do x <- choose (36.96583::Float,42.152946)
 --NovoCarro:Hibrido,Alfa Romeu,SC-46-99,591799212,49,1.2358807,1.1895249,951,-45.61733,-94.458176
 
 data NovoCarro = NovoCarro TipoCombustivel Marca Matricula NIF Velocidade Preco_Km CONS_Km Autonomia Coordenadas
-               deriving Show 
+
+instance Show NovoCarro where
+     show = pp_NovoCarro
+
+pp_NovoCarro (NovoCarro tc m mtr nif v p c au co ) = "NovoCarro:" ++ tc ++ "," ++ m ++ "," ++ mtr ++ ","
+                                                    ++ nif ++ "," ++ show v ++ "," ++ show p ++ "," ++ show c ++ ","
+                                                    ++ show au ++ "," ++ show (fst co) ++ "," ++ show (snd co)
 
 type TipoCombustivel = String
 type Marca = String  
@@ -150,7 +165,12 @@ genAutonomia = frequency [(20, elements [200..400]),(70,elements[400..700]),(10,
 --preferencia MaisPerto MaisBarato
 
 data Aluguer = Aluguer NIF Coordenadas TipoCombustivel Preferencia
-               deriving Show
+
+instance Show Aluguer where
+     show = pp_Aluguer
+
+pp_Aluguer (Aluguer nif co tc p) = "Aluguer:" ++ nif ++ "," ++ show (fst co) ++ ","
+                                   ++ show (snd co) ++ "," ++ tc ++ "," ++ p
 
 type Preferencia = String
 
@@ -182,7 +202,12 @@ genPreferencia = elements ["MaisPerto", "MaisBarato"]
 --Classificar:289068463,69
 
 data Classificar = Classificar (Either Matricula NIF) Nota
-                   deriving Show 
+
+instance Show Classificar where
+     show = pp_Classificar
+
+pp_Classificar (Classificar (Left id) n) = "Classificar:" ++ id ++ "," ++ show n
+pp_Classificar (Classificar (Right id) n) =  "Classificar:" ++ id ++ "," ++ show n
 
 type Nota = Int 
 
@@ -200,7 +225,15 @@ genNota = frequency [(10,elements[0..20]),(20,elements[20..50]),(60,elements[50.
 --import Test.QuickCheck
 
 data Log = Log [NovoProp] [NovoCliente] [NovoCarro] [Aluguer] [Classificar]
-        deriving Show
+
+instance Show Log where
+     show = pp_Log
+
+pp_Log (Log lp lcl lca la lcla) = pp_ListLog lp ++ pp_ListLog lcl ++ pp_ListLog lca ++ pp_ListLog la 
+                                  ++ pp_ListLog lcla
+
+pp_ListLog [] = ""
+pp_ListLog (x:xs) = show x ++ "\n" ++ pp_ListLog xs
 
 genLogs :: Int -> Int -> Int -> Int -> Int -> Gen Log
 genLogs nProps nClientes nCarros nAlugueres nClassifs  = 
@@ -226,8 +259,20 @@ nifProp (NovoProp _ nif _ _) = nif
 matrCarro :: NovoCarro -> Matricula
 matrCarro (NovoCarro _ _ matr _ _ _ _ _ _) = matr
 
-main :: IO()
+main :: IO ()
 main = do
-    writeFile "file.txt" (map toUpper "Hello, World!!")
-    return ()
+     putStr "Numero de Proprietarios: "
+     nProps <- getLine
+     putStr "Numero de Clientes: "
+     nClientes <- getLine
+     putStr "Numero de Carros: "
+     nCarros <- getLine
+     putStr "Numero de Alugueres: "
+     nAlugueres <- getLine
+     putStr "Numero de Classificacoes: "
+     nClassifs <- getLine
+     log <- generate $ genLogs (read nProps) (read nClientes) (read nCarros) (read nAlugueres) (read nClassifs)
+     writeFile "log.txt" ("Logs\n" ++ show log)
+     return ()
 
+--writeFile "log.txt" logs
