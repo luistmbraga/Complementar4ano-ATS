@@ -274,5 +274,3 @@ main = do
      log <- generate $ genLogs (read nProps) (read nClientes) (read nCarros) (read nAlugueres) (read nClassifs)
      writeFile "log.txt" ("Logs\n" ++ show log)
      return ()
-
---writeFile "log.txt" logs
