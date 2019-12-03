@@ -202,16 +202,21 @@ genPreferencia = elements ["MaisPerto", "MaisBarato"]
 --Classificar:YK-17-88,40
 --Classificar:289068463,69
 
-data Classificar = Classificar (Either Matricula NIF) Nota
+data Classificar = Classificar ID Nota
+
+type ID = String
 
 instance Show Classificar where
      show = pp_Classificar
 
-pp_Classificar (Classificar (Left id) n) = "Classificar:" ++ id ++ "," ++ show n
-pp_Classificar (Classificar (Right id) n) =  "Classificar:" ++ id ++ "," ++ show n
+--pp_Classificar (Classificar (Left id) n) = "Classificar:" ++ id ++ "," ++ show n
+--pp_Classificar (Classificar (Right id) n) =  "Classificar:" ++ id ++ "," ++ show n
+
+pp_Classificar (Classificar id n) = "Classificar:" ++ id ++ "," ++ show n
 
 type Nota = Int 
 
+{-
 genClassificar :: Either [Matricula] [NIF] -> Gen Classificar
 genClassificar (Left matrs) = do matr <- elements matrs
                                  nota <- genNota
@@ -219,7 +224,14 @@ genClassificar (Left matrs) = do matr <- elements matrs
 genClassificar (Right nifs) = do nif <- elements nifs
                                  nota <- genNota
                                  return $ Classificar (Right nif) nota 
-                              
+-}
+
+genClassificar :: [String] -> Gen Classificar
+genClassificar l = do 
+               matr <- elements l
+               nota <- genNota
+               return $ Classificar matr nota
+
 genNota :: Gen Nota 
 genNota = frequency [(10,elements[0..20]),(20,elements[20..50]),(60,elements[50..90]),(10,elements[80..100])]  
 
@@ -246,8 +258,8 @@ genLogs nProps nClientes nCarros nAlugueres nClassifs  =
                              carros    <- vectorOf nCarros $ genNovoCarro nifs
                              let matrs = map matrCarro carros
                              alugueres <- vectorOf nAlugueres $ genAluguer nifsC
-                             aleat     <- elements [True,False]
-                             classifs  <- vectorOf nClassifs $ genClassificar $ if aleat then Left matrs else Right nifs
+                             ids <- shuffle (nifs ++ matrs)
+                             classifs  <- vectorOf nClassifs $ genClassificar ids
                              return $ Log props clientes carros alugueres classifs
 
 
