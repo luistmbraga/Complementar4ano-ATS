@@ -209,22 +209,11 @@ type ID = String
 instance Show Classificar where
      show = pp_Classificar
 
---pp_Classificar (Classificar (Left id) n) = "Classificar:" ++ id ++ "," ++ show n
---pp_Classificar (Classificar (Right id) n) =  "Classificar:" ++ id ++ "," ++ show n
 
 pp_Classificar (Classificar id n) = "Classificar:" ++ id ++ "," ++ show n
 
 type Nota = Int 
 
-{-
-genClassificar :: Either [Matricula] [NIF] -> Gen Classificar
-genClassificar (Left matrs) = do matr <- elements matrs
-                                 nota <- genNota
-                                 return $ Classificar (Left matr) nota
-genClassificar (Right nifs) = do nif <- elements nifs
-                                 nota <- genNota
-                                 return $ Classificar (Right nif) nota 
--}
 
 genClassificar :: [String] -> Gen Classificar
 genClassificar l = do 
