@@ -242,8 +242,8 @@ pStat =  f <$> token' "while" <*> (enclosedBy (symbol' '(') pexp (symbol' ')'))
 -}
 
 followedBy :: Parser s a -> Parser s b -> Parser s [a]
-followedBy d s =  f <$> d <*> s
-              <|> g <$> d <*> s <*> followedBy d s 
+followedBy d s =  g <$> d <*> s <*> followedBy d s 
+               <|>  succeed []
             where f a b = [a] 
                   g a b c = a:c
 
