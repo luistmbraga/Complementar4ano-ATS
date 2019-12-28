@@ -5,7 +5,7 @@ import Data.Char
 import Nomes 
 import Localidades
 import System.IO
-import Data.List (nub)
+import System.Directory
 
 --NovoProp: nome, nif, email,morada   287
 --NovoProp:Laurindo,558192493,611843917@gmail.com,Miranda do Douro
@@ -266,6 +266,14 @@ prompt text = do
           putStr text
           hFlush stdout
           getLine
+          
+file = "log.txt"
+
+fileName n = do
+             exists <- doesFileExist a
+             if exists then (fileName (n+1))
+             else return a
+          where a = "("++ (show n) ++")"++file
 
 main :: IO ()
 main = do
@@ -275,5 +283,6 @@ main = do
      nAlugueres <- prompt "Numero de Alugueres: "
      nClassifs <- prompt "Numero de Classificacoes: "
      log <- generate $ genLogs (read nProps) (read nClientes) (read nCarros) (read nAlugueres) (read nClassifs)
-     writeFile "log.txt" ("Logs\n" ++ show log)
+     filename <- fileName 0
+     writeFile filename ("Logs\n" ++ show log)
      return ()
