@@ -5,6 +5,8 @@ import Data.Char
 import Nomes 
 import Localidades
 import System.IO
+import Control.Monad
+import Control.Monad.State.Strict
 import System.Directory
 
 --NovoProp: nome, nif, email,morada   287
