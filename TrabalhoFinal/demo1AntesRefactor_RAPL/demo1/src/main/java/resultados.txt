@@ -1,0 +1,6 @@
+Dados de energia para o login:
+Energy consumption of dram: 5.499999999756255E-4 Energy consumption of cpu: 0.0011600000007092603 Energy consumption of package: 0.004393999999592779
+
+Dados de energia para adicionar um carro:
+Energy consumption of dram: 0.0 Energy consumption of cpu: 2.4399999983870657E-4 Energy consumption of package: 0.0
+
