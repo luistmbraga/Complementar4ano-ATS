@@ -8,6 +8,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="234" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -32,12 +35,12 @@
     <property name="evosuite_jar_location" value="C:\Users\joaon\Desktop\ATS\evosuite-1.0.6.jar" />
     <property name="execution_mode" value="MVN" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../demo1AntesRefactor/demo1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="memory_evosuite_param" value="2000" />
     <property name="mvn_location" value="C:\Users\joaon\Desktop\ATS\apache-maven-3.6.2\bin\mvn.cmd" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="target_folder_evosuite_param" value="src/evo" />
     <property name="time_evosuite_param" value="3" />
   </component>
@@ -58,15 +61,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Weather_ESTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="demo1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Cars_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UMCarroJa_ESTest">
+    <configuration name="Owner_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo1" />
       <extension name="coverage">
         <pattern>
@@ -75,13 +71,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.Cars_ESTest" />
+      <option name="MAIN_CLASS_NAME" value="model.Owner_ESTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Traffic_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Parser_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo1" />
       <extension name="coverage">
         <pattern>
@@ -90,7 +86,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.Traffic_ESTest" />
+      <option name="MAIN_CLASS_NAME" value="model.Parser_ESTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,6 +107,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Users_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.Users_ESTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Weather_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo1" />
       <extension name="coverage">
@@ -126,13 +137,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.Users_ESTest" />
+      <item itemvalue="JUnit.Weather_ESTest" />
+      <item itemvalue="JUnit.Parser_ESTest" />
+      <item itemvalue="JUnit.Owner_ESTest" />
+      <item itemvalue="JUnit.UMCarroJa_ESTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Weather_ESTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.Traffic_ESTest" />
         <item itemvalue="JUnit.UMCarroJa_ESTest" />
-        <item itemvalue="JUnit.Cars_ESTest" />
+        <item itemvalue="JUnit.Owner_ESTest" />
+        <item itemvalue="JUnit.Parser_ESTest" />
+        <item itemvalue="JUnit.Weather_ESTest" />
+        <item itemvalue="JUnit.Users_ESTest" />
       </list>
     </recent_temporary>
   </component>
@@ -154,12 +172,45 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/demo1$UMCarroJa_ESTest.exec" NAME="UMCarroJa_ESTest Coverage Results" MODIFIED="1579515521154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$User_ESTest.ic" NAME="User_ESTest Coverage Results" MODIFIED="1579516118242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$UMCarroJa_ESTest.ic" NAME="UMCarroJa_ESTest Coverage Results" MODIFIED="1579516344508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$Traffic_ESTest.ic" NAME="Traffic_ESTest Coverage Results" MODIFIED="1579515487778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$Weather_ESTest.ic" NAME="Weather_ESTest Coverage Results" MODIFIED="1579516133918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$Cars_ESTest.ic" NAME="Cars_ESTest Coverage Results" MODIFIED="1579515440595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$Parser_ESTest.ic" NAME="Parser_ESTest Coverage Results" MODIFIED="1579516149051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$Car_ESTest.ic" NAME="Car_ESTest Coverage Results" MODIFIED="1579515350040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$Users_ESTest.ic" NAME="Users_ESTest Coverage Results" MODIFIED="1579516126797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$Rentals_ESTest.ic" NAME="Rentals_ESTest Coverage Results" MODIFIED="1579515471079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$Owner_ESTest.ic" NAME="Owner_ESTest Coverage Results" MODIFIED="1579516317413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
   </component>
 </project>

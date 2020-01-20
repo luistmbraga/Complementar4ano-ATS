@@ -1,0 +1,5 @@
+
+
+interface ITable {
+    String toString();
+}

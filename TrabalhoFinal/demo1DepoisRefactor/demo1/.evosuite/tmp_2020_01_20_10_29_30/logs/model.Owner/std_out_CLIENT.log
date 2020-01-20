@@ -1,0 +1,100 @@
+* Starting client
+* Connecting to master process on port 9586
+* Analyzing classpath: 
+  - C:/Users/joaon/Desktop/ATS/Projeto/demo1/target/classes
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\charsets.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\deploy.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\access-bridge-64.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\cldrdata.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\dnsns.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\jaccess.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\jfxrt.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\localedata.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\nashorn.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\sunec.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\sunjce_provider.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\sunmscapi.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\sunpkcs11.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\zipfs.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\javaws.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfr.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfxswt.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\jsse.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\management-agent.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\plugin.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\resources.jar
+  - C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar
+  - C:\Users\joaon\Desktop\ATS\Projeto\demo1\target\classes
+* Finished analyzing classpath
+* Generating tests for class model.Owner
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Setting up search algorithm for whole suite generation
+[MASTER] 10:29:38.466 [pool-2-thread-1] WARN  TestSuiteSerialization - Problems when reading a serialized test from C:\Users\joaon\Desktop\ATS\Projeto\demo1\.evosuite\evosuite-seeds\model.Owner.seed : Model/Owner (wrong name: model/Owner)
+* Loaded 0 tests from C:\Users\joaon\Desktop\ATS\Projeto\demo1\.evosuite\evosuite-seeds\model.Owner.seed
+* Total number of test goals: 
+  - Line 37
+  - Branch 24
+  - Exception 0
+  - MutationFactory 16
+  - Output 18
+  - Method 11
+  - MethodNoException 11
+  - CBranchFitnessFactory 24
+* Using seed 1579516174597
+* Starting evolution
+* Search finished after 96s and 1941 generations, 771108 statements, best individual has fitness: 8.7
+* Writing sequences to pool
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 37
+* Number of covered goals: 37
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 96%
+* Total number of goals: 24
+* Number of covered goals: 23
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 4
+* Number of covered goals: 4
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 100%
+* Total number of goals: 16
+* Number of covered goals: 16
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 72%
+* Total number of goals: 18
+* Number of covered goals: 13
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 11
+* Number of covered goals: 11
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 11
+* Number of covered goals: 11
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 92%
+* Total number of goals: 24
+* Number of covered goals: 22
+* Generated 20 tests with total length 95
+* Resulting test suite's coverage: 95% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 100%
+* Compiling and checking tests
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         loadLibrary.sunmscapi: 1
+* Writing JUnit test case 'Owner_ESTest' to C:\Users\joaon\Desktop\ATS\Projeto\demo1\.evosuite\tmp_2020_01_20_10_29_30\tests
+* Done!
+
