@@ -19,13 +19,13 @@ public class Main {
             LOGGER.warning("adasdsada2");
             new Parser("db/logsPOO_carregamentoInicial.bak", model);
         }
-        try { Thread.sleep(10000);} catch (Exception e) {LOGGER.warning(e.toString());} // smell -> preenchido o campo desta exception
+        try { Thread.sleep(10000);} catch (Exception e) {LOGGER.warning(e.toString() + "aqui");} // smell -> preenchido o campo desta exception
         new Controller(model).run();
         try {
             model.save(".tmp");
         }
         catch (IOException ignored) {
-            LOGGER.warning(ignored.toString());     // preenchido o campo desta exception -> smell
+            LOGGER.warning(ignored.toString()+ "aqui2");     // preenchido o campo desta exception -> smell
         }
     }
 }

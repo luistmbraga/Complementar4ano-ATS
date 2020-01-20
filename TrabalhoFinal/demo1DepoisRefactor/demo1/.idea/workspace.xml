@@ -48,6 +48,10 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="mainclass" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\luisb\Documents\GitHub\Complementar4ano-ATS\TrabalhoFinal\demo1DepoisRefactor\demo1\db" />
+      <recent name="C:\Users\luisb\Documents\GitHub\Complementar4ano-ATS\TrabalhoFinal\demo1DepoisRefactor\demo1\src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -61,7 +65,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UMCarroJa_ESTest">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="demo1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Owner_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo1" />
       <extension name="coverage">
@@ -107,21 +118,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Users_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.Users_ESTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Weather_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo1" />
       <extension name="coverage">
@@ -138,7 +134,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.Users_ESTest" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.Weather_ESTest" />
       <item itemvalue="JUnit.Parser_ESTest" />
       <item itemvalue="JUnit.Owner_ESTest" />
@@ -146,11 +142,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.UMCarroJa_ESTest" />
         <item itemvalue="JUnit.Owner_ESTest" />
         <item itemvalue="JUnit.Parser_ESTest" />
         <item itemvalue="JUnit.Weather_ESTest" />
-        <item itemvalue="JUnit.Users_ESTest" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +168,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -246,7 +246,7 @@ public class UMCarroJa implements Serializable {
     }
 
 
-    // SEM BLOCKER ASSIM, CLOSE OBJECT OUTPUT COM TRY WITH RESOURCE -> https://stackoverflow.com/questions/47397157/how-to-close-objectinputstream-properly
+   /* // SEM BLOCKER ASSIM, CLOSE OBJECT OUTPUT COM TRY WITH RESOURCE -> https://stackoverflow.com/questions/47397157/how-to-close-objectinputstream-properly
     // smell -> o close é feito automaticamente logo removeu-se o close
     public void save(String fName) throws IOException {
         try (FileOutputStream a = new FileOutputStream(fName);
@@ -268,6 +268,22 @@ public class UMCarroJa implements Serializable {
         } catch (Exception e) {
             LOGGER.warning(e.toString());
         }
+        return u;
+    }*/
+
+    public void save(String fName) throws IOException {
+        FileOutputStream a = new FileOutputStream(fName);
+        ObjectOutputStream r = new ObjectOutputStream(a);
+        r.writeObject(this);
+        r.flush();
+        r.close();
+    }
+
+    public static UMCarroJa read(String fName) throws IOException, ClassNotFoundException {
+        FileInputStream r = new FileInputStream(fName);
+        ObjectInputStream a = new ObjectInputStream(r);
+        UMCarroJa u = (UMCarroJa) a.readObject();
+        a.close();
         return u;
     }
 }
