@@ -1,6 +1,90 @@
 Dados de energia para o login:
-Energy consumption of dram: 5.499999999756255E-4 Energy consumption of cpu: 0.0011600000007092603 Energy consumption of package: 0.004393999999592779
+Energy consumption of dram: 7.329999999683423E-4 Energy consumption of cpu: 9.159999999610591E-4 Energy consumption of package: 0.004028000000289467
+
+Dados de energia para a determinação do carro mais próximo:
+Energy consumption of dram: 0.0017090000000052896 Energy consumption of cpu: 0.0032350000001315493 Energy consumption of package: 0.011901999999281543
+
+Dados de energia para a determinação do carro mais barato:
+Energy consumption of dram: 0.004638999999997395 Energy consumption of cpu: 0.006286999999929321 Energy consumption of package: 0.020201999999699183
+
+Dados de energia para a determinação do carro mais barato mais próximo:
+Energy consumption of dram: 0.01745600000003833 Energy consumption of cpu: 0.036315999999942505 Energy consumption of package: 0.10833699999966484
+
+Dados de energia para o cálculo da autonomia:
+Energy consumption of dram: 0.010925000000042928 Energy consumption of cpu: 0.025513000000046304 Energy consumption of package: 0.06829899999956979
+
+Dados de energia para a determinação de um carro específico:
+Energy consumption of dram: 0.0 Energy consumption of cpu: 3.6599999998543353E-4 Energy consumption of package: 0.0
+
+Dados de energia para o login:
+Energy consumption of dram: 6.11000000048989E-4 Energy consumption of cpu: 0.001036999999996624 Energy consumption of package: 0.003539999999702559
 
 Dados de energia para adicionar um carro:
-Energy consumption of dram: 0.0 Energy consumption of cpu: 2.4399999983870657E-4 Energy consumption of package: 0.0
+Energy consumption of dram: 6.709999998975036E-4 Energy consumption of cpu: 6.710000000111904E-4 Energy consumption of package: 0.00408900000002177
+
+Dados de energia para o registo do cliente:
+Energy consumption of dram: 0.0 Energy consumption of cpu: 9.760000000369473E-4 Energy consumption of package: 0.0037229999998089625
+
+Dados de energia para o registo do proprietário:
+Energy consumption of dram: 0.0 Energy consumption of cpu: 4.2800000005627226E-4 Energy consumption of package: 0.0
+
+Dados de energia para o login:
+Energy consumption of dram: 0.0 Energy consumption of cpu: 9.759999998095736E-4 Energy consumption of package: 0.0
+
+Dados de energia para a determinação do carro mais próximo:
+Energy consumption of dram: 0.01385500000014872 Energy consumption of cpu: 0.01989800000001196 Energy consumption of package: 0.07165600000007544
+
+Dados de energia para a determinação do carro mais barato:
+Energy consumption of dram: 0.013427000000092448 Energy consumption of cpu: 0.02404800000022078 Energy consumption of package: 0.07989499999894178
+
+Dados de energia para a determinação do carro mais barato mais próximo:
+Energy consumption of dram: 0.04949899999996887 Energy consumption of cpu: 0.13122599999996964 Energy consumption of package: 0.3533930000012333
+
+Dados de energia para o cálculo da autonomia:
+Energy consumption of dram: 0.02716099999997823 Energy consumption of cpu: 0.052246000000195636 Energy consumption of package: 0.14813299999877927
+
+Dados de energia para a determinação de um carro específico:
+Energy consumption of dram: 0.0 Energy consumption of cpu: 5.499999997482519E-4 Energy consumption of package: 0.0
+
+Dados de energia para o login:
+Energy consumption of dram: 7.940000000417058E-4 Energy consumption of cpu: 0.0010379999998804124 Energy consumption of package: 0.0037849999989703065
+
+Dados de energia para adicionar um carro:
+Energy consumption of dram: 0.0 Energy consumption of cpu: 3.050000000257569E-4 Energy consumption of package: 0.003296000000773347
+
+Dados de energia para o registo do cliente:
+Energy consumption of dram: 5.489999998644635E-4 Energy consumption of cpu: 7.329999998546555E-4 Energy consumption of package: 0.002868999999918742
+
+Dados de energia para o registo do proprietário:
+Energy consumption of dram: 0.0 Energy consumption of cpu: 5.489999998644635E-4 Energy consumption of package: 0.0
+
+Dados de energia para o login:
+Energy consumption of dram: 5.500000002029992E-4 Energy consumption of cpu: 7.939999995869584E-4 Energy consumption of package: 0.0038449999992735684
+
+Dados de energia para a determinação do carro mais próximo:
+Energy consumption of dram: 0.04870600000003833 Energy consumption of cpu: 0.3548589999991236 Energy consumption of package: 0.47021500000118976
+
+Dados de energia para a determinação do carro mais barato:
+Energy consumption of dram: 0.05163600000014412 Energy consumption of cpu: 0.4055179999995744 Energy consumption of package: 0.5337519999993674
+
+Dados de energia para a determinação do carro mais barato mais próximo:
+Energy consumption of dram: 0.07409700000016528 Energy consumption of cpu: 1.1356809999997495 Energy consumption of package: 1.3460080000004382
+
+Dados de energia para o cálculo da autonomia:
+Energy consumption of dram: 0.061217999999826134 Energy consumption of cpu: 0.542540999999801 Energy consumption of package: 0.6937259999995149
+
+Dados de energia para a determinação de um carro específico:
+Energy consumption of dram: 0.0 Energy consumption of cpu: 4.269999999451102E-4 Energy consumption of package: 0.0
+
+Dados de energia para o login:
+Energy consumption of dram: 6.720000001223525E-4 Energy consumption of cpu: 7.31999998606625E-4 Energy consumption of package: 0.004150000000663567
+
+Dados de energia para adicionar um carro:
+Energy consumption of dram: 4.880000001321605E-4 Energy consumption of cpu: 4.890000000159489E-4 Energy consumption of package: 0.0032960000025923364
+
+Dados de energia para o registo do cliente:
+Energy consumption of dram: 4.269999999451102E-4 Energy consumption of cpu: 4.270000008546049E-4 Energy consumption of package: 0.003967000000557164
+
+Dados de energia para o registo do proprietário:
+Energy consumption of dram: 7.319999999708671E-4 Energy consumption of cpu: 6.109999994805548E-4 Energy consumption of package: 0.004211999999824911
 
