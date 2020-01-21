@@ -2,6 +2,8 @@
 
 
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -20,22 +22,43 @@ public class Controller {
         this.model = model;
     }
 
-    public void run(){
+    public void run() throws IOException {
         String error = "";
         // bad smell reduzir a repetição da string "Parametros Inválidos"
         String paraminvalidos = "Parametros Inválidos";
         String nocarsav = "No cars availables";
         while(this.menu.getRun()) {
+            long start, finish, timeElapsed;
             switch (menu.getMyind()) {
                 case LOGIN:
                     try {
                         NewLogin r = menu.newLogin(error);
+                        // medir inicio do tempo
+                        start = System.currentTimeMillis();
+                        // medir energia
+                        double[] before = EnergyCheckUtils.getEnergyStats();
                         user = model.logIn(r.getUser(), r.getPassword());
+                        // Medir fim da energia
+                        double[] after = EnergyCheckUtils.getEnergyStats();
+
+                        FileWriter myWriter = new FileWriter("resultados.txt",true);
+                        myWriter.append("Dados de energia para o login:\n");
+                        myWriter.append("Energy consumption of dram: " + (after[0] - before[0])+ " Energy consumption of cpu: " + (after[1] - before[1])+ " Energy consumption of package: " + (after[2] - before[2]) + "\n\n");
+                        myWriter.close();
+                        // medir fim do tempo
+                        finish = System.currentTimeMillis();
+
+                        timeElapsed = finish - start;
+                        System.out.println("Tempo de execucao: " + timeElapsed + " milisegundos");
+
+
                         menu.selectOption((user instanceof Client)? Menu.MenuInd.CLIENT : Menu.MenuInd.OWNER);
                         error = "";
                     }
                     catch (InvalidUserException e){ error = "Invalid Username"; }
-                    catch (WrongPasswordExecption e){ error = "Invalid Password"; }
+                    catch (WrongPasswordExecption e){ error = "Invalid Password"; } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     break;
                 case REGISTERCLIENT:
                     try {
@@ -48,12 +71,35 @@ public class Controller {
                                 registerUserCli.getAddress(),
                                 registerUserCli.getNif()
                         );
+
+                        // medir inicio do tempo
+                        start = System.currentTimeMillis();
+                        // medir energia
+                        double[] before = EnergyCheckUtils.getEnergyStats();
+
                         this.model.addUser(client);
+
+                        // Medir fim da energia
+                        double[] after = EnergyCheckUtils.getEnergyStats();
+
+                        FileWriter myWriter = new FileWriter("resultados.txt",true);
+                        myWriter.append("Dados de energia para o registo do cliente:\n");
+                        myWriter.append("Energy consumption of dram: " + (after[0] - before[0])+ " Energy consumption of cpu: " + (after[1] - before[1])+ " Energy consumption of package: " + (after[2] - before[2]) + "\n\n");
+                        myWriter.close();
+
+                        // medir fim do tempo
+                        finish = System.currentTimeMillis();
+
+                        timeElapsed = finish - start;
+                        System.out.println("Tempo de execucao: " + timeElapsed + " milisegundos");
+
                         menu.back();
                         error = "";
                     }
                     catch (InvalidNewRegisterException e){ error = paraminvalidos; }
-                    catch (UserExistsException e){ error = "Utilizador já existe"; }
+                    catch (UserExistsException e){ error = "Utilizador já existe"; } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     break;
                 case REGISTEROWNER:
                     try {
@@ -65,18 +111,80 @@ public class Controller {
                                 registerUserProp.getNif(),
                                 registerUserProp.getPasswd()
                         );
+
+                        // medir inicio do tempo
+                        start = System.currentTimeMillis();
+                        // medir energia
+                        double[] before = EnergyCheckUtils.getEnergyStats();
+
                         this.model.addUser(owner);
+
+                        // Medir fim da energia
+                        double[] after = EnergyCheckUtils.getEnergyStats();
+
+                        FileWriter myWriter = new FileWriter("resultados.txt",true);
+                        myWriter.append("Dados de energia para o registo do proprietário:\n");
+                        myWriter.append("Energy consumption of dram: " + (after[0] - before[0])+ " Energy consumption of cpu: " + (after[1] - before[1])+ " Energy consumption of package: " + (after[2] - before[2]) + "\n\n");
+                        myWriter.close();
+
+                        // medir fim do tempo
+                        finish = System.currentTimeMillis();
+
+                        timeElapsed = finish - start;
+                        System.out.println("Tempo de execucao: " + timeElapsed + " milisegundos");
+
                         menu.back();
                         error = "";
                     }
                     catch (InvalidNewRegisterException e){ error = paraminvalidos; }
-                    catch (UserExistsException e){ error = "Utilizador já existe"; }
+                    catch (UserExistsException e){ error = "Utilizador já existe"; } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     break;
                 case CLOSEST:
+                    // medir inicio do tempo
+                    start = System.currentTimeMillis();
+                    // medir energia
+                    double[] before = EnergyCheckUtils.getEnergyStats();
+
                     error = getClosestOuCheapest(error, nocarsav, "MaisPerto");
+
+                    // Medir fim da energia
+                    double[] after = EnergyCheckUtils.getEnergyStats();
+
+                    FileWriter myWriter = new FileWriter("resultados.txt",true);
+                    myWriter.append("Dados de energia para a determinação do carro mais próximo:\n");
+                    myWriter.append("Energy consumption of dram: " + (after[0] - before[0])+ " Energy consumption of cpu: " + (after[1] - before[1])+ " Energy consumption of package: " + (after[2] - before[2]) + "\n\n");
+                    myWriter.close();
+
+                    // medir fim do tempo
+                    finish = System.currentTimeMillis();
+
+                    timeElapsed = finish - start;
+                    System.out.println("Tempo de execucao: " + timeElapsed + " milisegundos");
                     break;
                 case CHEAPEST:
+                    // medir inicio do tempo
+                    start = System.currentTimeMillis();
+                    // medir energia
+                    before = EnergyCheckUtils.getEnergyStats();
+
                     error = getClosestOuCheapest(error, nocarsav, "MaisBarato");
+
+                    // Medir fim da energia
+                    after = EnergyCheckUtils.getEnergyStats();
+
+                    myWriter = new FileWriter("resultados.txt", true);
+                    myWriter.append("Dados de energia para a determinação do carro mais barato:\n");
+                    myWriter.append("Energy consumption of dram: " + (after[0] - before[0])+ " Energy consumption of cpu: " + (after[1] - before[1])+ " Energy consumption of package: " + (after[2] - before[2]) + "\n\n");
+                    myWriter.close();
+
+                    // medir fim do tempo
+                    finish = System.currentTimeMillis();
+
+                    timeElapsed = finish - start;
+                    System.out.println("Tempo de execucao: " + timeElapsed + " milisegundos");
+
                     break;
                 case REVIEWRENTAL:
                     Owner owner = (Owner)this.user;
@@ -121,12 +229,31 @@ public class Controller {
                     try{
                         CheapestNearCar walkCar = menu.walkingDistanceRent(error);
 
+                        // medir inicio do tempo
+                        start = System.currentTimeMillis();
+                        // medir energia
+                        before = EnergyCheckUtils.getEnergyStats();
+
                         Rental rental = model.rental(
                                 (Client)user,
                                 walkCar.getPoint(),
                                 walkCar.getWalkDistance(),
                                 walkCar.getType()
                         );
+
+                        // Medir fim da energia
+                        after = EnergyCheckUtils.getEnergyStats();
+
+                        myWriter = new FileWriter("resultados.txt", true);
+                        myWriter.append("Dados de energia para a determinação do carro mais barato mais próximo:\n");
+                        myWriter.append("Energy consumption of dram: " + (after[0] - before[0])+ " Energy consumption of cpu: " + (after[1] - before[1])+ " Energy consumption of package: " + (after[2] - before[2]) + "\n\n");
+                        myWriter.close();
+
+                        // medir fim do tempo
+                        finish = System.currentTimeMillis();
+
+                        timeElapsed = finish - start;
+                        System.out.println("Tempo de execucao: " + timeElapsed + " milisegundos");
 
                         this.menu.showString(rental.toString());
                         this.menu.back();
@@ -140,11 +267,31 @@ public class Controller {
                     try{
                         AutonomyCar autoCar = menu.autonomyCarRent(error);
 
+                        // medir inicio do tempo
+                        start = System.currentTimeMillis();
+                        // medir energia
+                        before = EnergyCheckUtils.getEnergyStats();
+
                         Rental rental = model.rental(
                                 autoCar.getPoint(),
                                 autoCar.getAutonomy(),
                                 autoCar.getType(),
                                 (Client)user);
+
+
+                        // Medir fim da energia
+                        after = EnergyCheckUtils.getEnergyStats();
+
+                        myWriter = new FileWriter("resultados.txt", true);
+                        myWriter.append("Dados de energia para o cálculo da autonomia:\n");
+                        myWriter.append("Energy consumption of dram: " + (after[0] - before[0])+ " Energy consumption of cpu: " + (after[1] - before[1])+ " Energy consumption of package: " + (after[2] - before[2]) + "\n\n");
+                        myWriter.close();
+
+                        // medir fim do tempo
+                        finish = System.currentTimeMillis();
+
+                        timeElapsed = finish - start;
+                        System.out.println("Tempo de execucao: " + timeElapsed + " milisegundos");
 
                         menu.showString(rental.toString());
                         this.menu.back();
@@ -157,7 +304,29 @@ public class Controller {
                 case SPECIFIC:
                     try {
                         SpecificCar sc = this.menu.specificCarRent(error);
+
+                        // medir inicio do tempo
+                        start = System.currentTimeMillis();
+                        // medir energia
+                        before = EnergyCheckUtils.getEnergyStats();
+
                         Rental rental = this.model.rental(sc.getPoint(), sc.getNumberPlate(), (Client)user);
+
+
+                        // Medir fim da energia
+                        after = EnergyCheckUtils.getEnergyStats();
+
+                        myWriter = new FileWriter("resultados.txt", true);
+                        myWriter.append("Dados de energia para a determinação de um carro específico:\n");
+                        myWriter.append("Energy consumption of dram: " + (after[0] - before[0])+ " Energy consumption of cpu: " + (after[1] - before[1])+ " Energy consumption of package: " + (after[2] - before[2]) + "\n\n");
+                        myWriter.close();
+
+                        // medir fim do tempo
+                        finish = System.currentTimeMillis();
+
+                        timeElapsed = finish - start;
+                        System.out.println("Tempo de execucao: " + timeElapsed + " milisegundos");
+
                         this.menu.showString(rental.toString());
                         this.menu.back();
                         error = "";
@@ -171,6 +340,12 @@ public class Controller {
                     try {
                         RegisterCar registerCar = menu.newRegisterCar(error);
                         Owner ownerCar = (Owner)this.user;
+
+                        // medir inicio do tempo
+                        start = System.currentTimeMillis();
+                        // medir energia
+                        before = EnergyCheckUtils.getEnergyStats();
+
                         model.addCar(
                                 ownerCar,
                                 registerCar.getNumberPlate(),
@@ -182,6 +357,21 @@ public class Controller {
                                 registerCar.getPos(),
                                 registerCar.getBrand()
                         );
+
+                        // Medir fim da energia
+                        after = EnergyCheckUtils.getEnergyStats();
+
+                        myWriter = new FileWriter("resultados.txt", true);
+                        myWriter.append("Dados de energia para adicionar um carro:\n");
+                        myWriter.append("Energy consumption of dram: " + (after[0] - before[0])+ " Energy consumption of cpu: " + (after[1] - before[1])+ " Energy consumption of package: " + (after[2] - before[2]) + "\n\n");
+                        myWriter.close();
+
+                        // medir fim do tempo
+                        finish = System.currentTimeMillis();
+
+                        timeElapsed = finish - start;
+                        System.out.println("Tempo de execucao: " + timeElapsed + " milisegundos");
+
                         menu.back();
                         error = "";
                     }
