@@ -1,8 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="899304c7-c835-494e-9577-ce08239c62a4" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="899304c7-c835-494e-9577-ce08239c62a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/db/(0)log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/db/(1)log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/db/(2)log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/db/logsPOO_carregamentoInicial.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/src/main/java/EnergyCheckUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/src/main/java/EnergyCheckUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Controller/Controller$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/EnergyCheckUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/EnergyCheckUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Exceptions/CarExistsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Exceptions/InvalidCarException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Exceptions/InvalidNewRegisterException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Exceptions/InvalidNewRentalException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Exceptions/InvalidNumberOfArgumentsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Exceptions/InvalidRatingException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Exceptions/InvalidTimeIntervalException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Exceptions/InvalidUserException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Exceptions/NoCarAvaliableException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Exceptions/UnknownCarTypeException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Exceptions/UnknownCompareTypeException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Exceptions/UserExistsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Exceptions/WrongPasswordExecption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Model/Car$CarType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Model/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Model/Cars.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Model/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Model/Owner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Model/Parser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Model/Rental.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Model/Rentals.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Model/Traffic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Model/UMCarroJa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Model/Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Model/Weather.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Utils/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/Utils/StringBetter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/ITable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/Menu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/Menu$MenuInd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/Table.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/ViewModel/AutonomyCar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/ViewModel/CheapestNearCar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/ViewModel/NewLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/ViewModel/RateOwnerCar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/ViewModel/RegisterCar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/ViewModel/RegisterUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/ViewModel/RentCarSimple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/ViewModel/SpecificCar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1AntesRefactor_RAPL/demo1/target/classes/View/ViewModel/TimeInterval.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EnergyCheckUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnergyCheckUtils.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +76,11 @@
   </component>
   <component name="ProjectId" id="1TX6QOvyA5qTRdoTGTw6yTNknAj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="JAVA_HOME" value="C:\Program Files\Java\jdk1.8.0_181" />
@@ -52,18 +110,6 @@
       <recent name="C:\Users\luisb\Documents\GitHub\Complementar4ano-ATS\TrabalhoFinal\demo1DepoisRefactor\demo1\db" />
       <recent name="C:\Users\luisb\Documents\GitHub\Complementar4ano-ATS\TrabalhoFinal\demo1DepoisRefactor\demo1\src" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -150,6 +196,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -176,38 +234,56 @@
       </map>
     </option>
   </component>
+  <component name="WindowStateProjectService">
+    <state width="1320" height="161" key="GridCell.Tab.0.bottom" timestamp="1579799601821">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="161" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1579799601821" />
+    <state width="1320" height="161" key="GridCell.Tab.0.center" timestamp="1579799601819">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="161" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1579799601819" />
+    <state width="1320" height="161" key="GridCell.Tab.0.left" timestamp="1579799601818">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="161" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1579799601818" />
+    <state width="1320" height="161" key="GridCell.Tab.0.right" timestamp="1579799601821">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="161" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1579799601821" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/demo1$UMCarroJa_ESTest.exec" NAME="UMCarroJa_ESTest Coverage Results" MODIFIED="1579515521154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>model.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/demo1$User_ESTest.ic" NAME="User_ESTest Coverage Results" MODIFIED="1579516118242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>model.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/demo1$UMCarroJa_ESTest.ic" NAME="UMCarroJa_ESTest Coverage Results" MODIFIED="1579516344508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>model.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/demo1$Traffic_ESTest.ic" NAME="Traffic_ESTest Coverage Results" MODIFIED="1579515487778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>model.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/demo1$Weather_ESTest.ic" NAME="Weather_ESTest Coverage Results" MODIFIED="1579516133918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>model.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/demo1$Cars_ESTest.ic" NAME="Cars_ESTest Coverage Results" MODIFIED="1579515440595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>model.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/demo1$Parser_ESTest.ic" NAME="Parser_ESTest Coverage Results" MODIFIED="1579516149051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>model.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/demo1$Car_ESTest.ic" NAME="Car_ESTest Coverage Results" MODIFIED="1579515350040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>model.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/demo1$Users_ESTest.ic" NAME="Users_ESTest Coverage Results" MODIFIED="1579516126797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>model.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/demo1$Rentals_ESTest.ic" NAME="Rentals_ESTest Coverage Results" MODIFIED="1579515471079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>model.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$User_ESTest.ic" NAME="User_ESTest Coverage Results" MODIFIED="1579516118242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$Weather_ESTest.ic" NAME="Weather_ESTest Coverage Results" MODIFIED="1579516133918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$UMCarroJa_ESTest.exec" NAME="UMCarroJa_ESTest Coverage Results" MODIFIED="1579515521154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$Users_ESTest.ic" NAME="Users_ESTest Coverage Results" MODIFIED="1579516126797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/demo1$Owner_ESTest.ic" NAME="Owner_ESTest Coverage Results" MODIFIED="1579516317413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$Traffic_ESTest.ic" NAME="Traffic_ESTest Coverage Results" MODIFIED="1579515487778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$UMCarroJa_ESTest.ic" NAME="UMCarroJa_ESTest Coverage Results" MODIFIED="1579516344508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$Cars_ESTest.ic" NAME="Cars_ESTest Coverage Results" MODIFIED="1579515440595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/demo1$Car_ESTest.ic" NAME="Car_ESTest Coverage Results" MODIFIED="1579515350040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>model.*</FILTER>
     </SUITE>
   </component>

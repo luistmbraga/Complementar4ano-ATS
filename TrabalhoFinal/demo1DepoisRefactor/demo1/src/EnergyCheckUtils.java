@@ -18,7 +18,7 @@ public class EnergyCheckUtils {
 
 	public static int socketNum;
 	static {
-		System.setProperty("java.library.path", "/home/bruna/Desktop/MEI/Análise_e_Teste_de_Software/Trabalho-ATS/Complementar4ano-ATS/TrabalhoFinal/demo1DepoisRefactor/demo1/src");
+		System.setProperty("java.library.path", System.getProperty("user.dir"));
 		try {
 			Field fieldSysPath = ClassLoader.class.getDeclaredField("sys_paths");
 			fieldSysPath.setAccessible(true);
