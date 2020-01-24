@@ -9,7 +9,7 @@ public class Main {
     private static final Logger LOGGER = Logger.getLogger(Parser.class.getName());
 
     // System.out.println -> LOGGER (smell)
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         UMCarroJa model = new UMCarroJa();
         try {
             model = UMCarroJa.read(".tmp");
@@ -17,7 +17,7 @@ public class Main {
         }
         catch (IOException | ClassNotFoundException e) {
             LOGGER.warning("adasdsada2");
-            new Parser("db/logsPOO_carregamentoInicial.bak", model);
+            new Parser("db/(0)log.txt", model);
         }
         try { Thread.sleep(10000);} catch (Exception e) {LOGGER.warning(e.toString());} // smell -> preenchido o campo desta exception
         new Controller(model).run();
