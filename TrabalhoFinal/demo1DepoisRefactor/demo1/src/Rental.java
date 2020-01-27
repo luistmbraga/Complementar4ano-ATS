@@ -65,8 +65,8 @@ public class Rental implements Serializable {
 
     // throw NoSuchAlgorithmException por ter mudado e guardado os randoms
     void rent() throws NoSuchAlgorithmException {
-        double weather = 0.5;//new Weather().getSeasonDelay();
-        double traffic = 1.5;//new Traffic().getTraficDelay(weather);
+        double weather = new Weather().getSeasonDelay(); //0.5;
+        double traffic = new Traffic().getTraficDelay(weather); //1.5;
         double delay = (weather % 0.5) + (traffic % 0.5);
 
         this.realTime = this.expectedTime * (1 + delay);
